@@ -1,0 +1,9 @@
+#Main {
+    background-image: url('./../assets/Back.png');
+    height: 100vh;
+    background-size: cover;
+}
+
+#Main > div {
+    min-height: 80vh;
+}

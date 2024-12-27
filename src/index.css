@@ -1,0 +1,19 @@
+:root {
+  --bs-primary: #18A2FE;
+  --bs-secondary: #6EC5FF;
+  --bs-gray: #656565;
+  --bs-light: #ffffff;
+}
+
+
+.cust-rounded {
+  border-radius: 1rem;
+}
+
+.cust-rounded-sm {
+  border-radius: 0.6rem;
+}
+
+.cust-border {
+  border: 1px solid #18A2FE;
+}
