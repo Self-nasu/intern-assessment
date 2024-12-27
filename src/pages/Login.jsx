@@ -59,7 +59,7 @@ function Login() {
             <div className="container-sm shadow-lg d-flex cust-border flex-column bg-light p-4 py-5 cust-rounded">
                 <div className="d-flex container-fluid justify-content-center align-items-center mb-5">
                     <img src="./Logo.svg" style={{ height: '50px' }} alt="Logo" />
-                    <p className="h1 px-2">Users (CURD) WebApp</p>
+                    <p className="h1 px-2">Users (CRUD) WebApp</p>
                 </div>
 
                 <div className="container-fluid d-flex">
