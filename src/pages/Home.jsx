@@ -9,7 +9,7 @@ import UsersTable from '../components/UsersTable';
 function Home() {
     const [user, setUser] = useState(null);
     const [totalUsers, setTotalUsers] = useState(0);
-    const [users, setUsers] = useState([]); // Add users state
+    const [users, setUsers] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -18,7 +18,7 @@ function Home() {
             alert('You must log in to access this page.');
             navigate('/');
         } else {
-            // Fetch current user's details
+            // current user detail
             axios
                 .get('http://localhost:5000/api/user', {
                     headers: { Authorization: `Bearer ${token}` },
@@ -29,7 +29,7 @@ function Home() {
                     alert('Failed to fetch user data.');
                 });
 
-            // Fetch total number of users
+            // total no of users
             axios
                 .get('http://localhost:5000/api/total-users')
                 .then((response) => setTotalUsers(response.data.totalUsers))
@@ -38,7 +38,7 @@ function Home() {
                     alert('Failed to fetch total users count.');
                 });
 
-            // Fetch users list
+            // fetch users list
             axios
                 .get('http://localhost:5000/api/users')
                 .then((response) => setUsers(response.data))
@@ -58,7 +58,6 @@ function Home() {
                 alert('User updated successfully');
                 setUser(response.data);
 
-                // Re-fetch users list after update
                 axios
                     .get('http://localhost:5000/api/users')
                     .then((response) => setUsers(response.data))
@@ -81,7 +80,6 @@ function Home() {
                 localStorage.removeItem('token');
                 navigate('/');
 
-                // Re-fetch users list after deletion
                 axios
                     .get('http://localhost:5000/api/users')
                     .then((response) => setUsers(response.data))
@@ -114,7 +112,7 @@ function Home() {
                 </div>
             </div>
             <div className='container-fluid p-3'>
-                <UsersTable users={users} /> {/* Pass users and setUsers to UsersTable */}
+                <UsersTable users={users} />
             </div>
         </>
     );
