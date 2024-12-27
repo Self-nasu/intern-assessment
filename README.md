@@ -19,6 +19,8 @@ This is my assessment project repository in which I created a MERN stack web app
 3. `npm install`
 4. `node server.js`
 
+5. Make Sure That YOu Have .env File in Your backend folder
+
 **Note**: You will need to set up the environment variables. The `.env` file should contain:
 - A **JWT key** for password encoding
 - A **MongoDB connection string**
@@ -40,6 +42,7 @@ For the website's base design, I used **Figma** (image below).
 
 ### Database:
 - **MongoDB** (Free Hosted on MongoDB Cluster)
+- For connecting to my db contact me for env file
 
 ### Final Website Image:
 
